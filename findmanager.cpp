@@ -10,8 +10,8 @@
 FindManager::FindManager(int count)
 {
     uploadData(count);
-
-    qDebug() << binaryTree("11/4/2023").toString();
+    qDebug().noquote() << binaryTree("11/4/2023").toString() << "\n";
+    qDebug().noquote() << rbTree("11/4/2023").toString() << "\n";
 }
 
 Data FindManager::binaryTree(const QVariant &key)
@@ -23,7 +23,9 @@ Data FindManager::binaryTree(const QVariant &key)
 
 Data FindManager::rbTree(const QVariant &key)
 {
+    RBTree tree(data);
 
+    return tree.find(key.toString());
 }
 
 Data FindManager::hashTable(const QVariant &key)
@@ -39,13 +41,13 @@ Data FindManager::hashTable(const QVariant &key)
  */
 void FindManager::uploadData(int count)
 {
-    qDebug() << "Begin data generating...";
+    qDebug().noquote() << "Begin data generating...";
     data.clear();
 
     for (int i = count; i >=0; --i)
         data.append(Data(i%3, QString("11/%1/2023").arg(i%8), getRandomName(i), i%4));
 
-    qDebug() << "Data uploaded!";
+    qDebug().noquote() << "Data uploaded!" << "\n";
 }
 
 /**

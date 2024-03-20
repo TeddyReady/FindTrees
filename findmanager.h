@@ -1,6 +1,6 @@
 #ifndef FindManager_H
 #define FindManager_H
-#include "binarytree.h"
+#include "rbtree.h"
 
 /**
  * @brief The FindManager class

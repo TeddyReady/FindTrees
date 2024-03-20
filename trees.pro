@@ -11,6 +11,7 @@ SOURCES += \
         data.cpp \
         main.cpp \
         findmanager.cpp \
+        rbtree.cpp \
         timekeeper.cpp
 
 # Default rules for deployment.
@@ -22,6 +23,7 @@ HEADERS += \
     binarytree.h \
     data.h \
     findmanager.h \
+    rbtree.h \
     timekeeper.h
 
 RESOURCES +=

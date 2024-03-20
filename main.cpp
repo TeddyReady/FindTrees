@@ -4,7 +4,7 @@
 
 int main(int argc, char *argv[])
 {
-    FindManager manager(10000);
+    FindManager manager(4);
 
     return 0;
 }

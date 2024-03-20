@@ -1,7 +1,7 @@
 #include "binarytree.h"
 
-BinaryNode::BinaryNode(const Data &_data)
-    : data(_data), left(nullptr), right(nullptr)
+BinaryNode::BinaryNode(const Data &_data, bool isRed)
+    : data(_data), left(nullptr), right(nullptr), isRed(isRed)
 {}
 
 BinaryNode::~BinaryNode()
@@ -19,18 +19,8 @@ QString BinaryNode::key()
 }
 
 BinaryTree::BinaryTree(const data_t &_data)
-    : root(nullptr)
-{
-    if (_data.empty())
-        return;
-
-    TimeKeeper::getInstance()->start();
-
-    for (int i = 0; i < _data.size(); ++i)
-        insert(_data.at(i));
-
-    qDebug() << QString("Binary tree was built by %1").arg(TimeKeeper::getInstance()->finish());
-}
+    : data(_data), root(nullptr)
+{}
 
 BinaryTree::~BinaryTree()
 {
@@ -38,8 +28,21 @@ BinaryTree::~BinaryTree()
         delete root;
 }
 
+void BinaryTree::buildTree()
+{
+    TimeKeeper::getInstance()->start();
+
+    for (int i = 0; i < data.size(); ++i)
+        insert(data.at(i));
+
+    qDebug().noquote() << QString("Binary tree was built by %1").arg(TimeKeeper::getInstance()->finish());
+}
+
 Data BinaryTree::find(const QString &date)
 {
+    if (root == nullptr)
+        buildTree();
+
     TimeKeeper::getInstance()->start();
 
     BinaryNode **currentNode = &root;
@@ -53,12 +56,12 @@ Data BinaryTree::find(const QString &date)
             currentNode = &node.right;
         else
         {
-            qDebug() << QString("Find data in binary tree: %1").arg(TimeKeeper::getInstance()->finish());
+            qDebug().noquote() << QString("Find data in binary tree: %1").arg(TimeKeeper::getInstance()->finish());
             return node.data;
         }
     }
 
-    qDebug() << QString("Data not found!: %1").arg(TimeKeeper::getInstance()->finish());
+    qDebug().noquote() << QString("Data not found!: %1").arg(TimeKeeper::getInstance()->finish());
     return Data();
 }
 
