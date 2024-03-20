@@ -1,0 +1,98 @@
+\hypertarget{class_time_keeper}{}\doxysection{Time\+Keeper Class Reference}
+\label{class_time_keeper}\index{TimeKeeper@{TimeKeeper}}
+
+
+The \mbox{\hyperlink{class_time_keeper}{Time\+Keeper}} class.  
+
+
+
+
+{\ttfamily \#include $<$timekeeper.\+h$>$}
+
+
+
+Collaboration diagram for Time\+Keeper\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{class_time_keeper__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_time_keeper_aba1d443fcfdba702f0e28031bcad98c8}\label{class_time_keeper_aba1d443fcfdba702f0e28031bcad98c8}} 
+\mbox{\hyperlink{class_time_keeper_aba1d443fcfdba702f0e28031bcad98c8}{$\sim$\+Time\+Keeper}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_time_keeper_aba1d443fcfdba702f0e28031bcad98c8}{Time\+Keeper\+::$\sim$\+Time\+Keeper}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_time_keeper_a27b309be5ed98bbdf61d508e4dadb99f}\label{class_time_keeper_a27b309be5ed98bbdf61d508e4dadb99f}} 
+{\bfseries Time\+Keeper} (const \mbox{\hyperlink{class_time_keeper}{Time\+Keeper}} \&other)=delete
+\item 
+\mbox{\Hypertarget{class_time_keeper_a911497ffad03f9e324ce81758deb47e7}\label{class_time_keeper_a911497ffad03f9e324ce81758deb47e7}} 
+\mbox{\hyperlink{class_time_keeper}{Time\+Keeper}} {\bfseries operator=} (const \mbox{\hyperlink{class_time_keeper}{Time\+Keeper}} \&other)=delete
+\item 
+void \mbox{\hyperlink{class_time_keeper_a9ebe48b270d60a177d2278af058b557e}{start}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_time_keeper_a9ebe48b270d60a177d2278af058b557e}{Time\+Keeper\+::start}}. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_time_keeper_a863e371c682163c95c45e4a84dd709f4}{finish}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_time_keeper_a863e371c682163c95c45e4a84dd709f4}{Time\+Keeper\+::finish}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_time_keeper}{Time\+Keeper}} $\ast$ \mbox{\hyperlink{class_time_keeper_a37c5d792ce1ee55d7c3daa82a3968254}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_time_keeper_a37c5d792ce1ee55d7c3daa82a3968254}{Time\+Keeper\+::get\+Instance}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_time_keeper_ac251c08a3b62807b94268d6ccb5e49a7}\label{class_time_keeper_ac251c08a3b62807b94268d6ccb5e49a7}} 
+static \mbox{\hyperlink{class_time_keeper}{Time\+Keeper}} $\ast$ \mbox{\hyperlink{class_time_keeper_ac251c08a3b62807b94268d6ccb5e49a7}{instance}} = nullptr
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_time_keeper_ac251c08a3b62807b94268d6ccb5e49a7}{Time\+Keeper\+::instance}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_time_keeper}{Time\+Keeper}} class. 
+
+Class for check time delays 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_time_keeper_a863e371c682163c95c45e4a84dd709f4}\label{class_time_keeper_a863e371c682163c95c45e4a84dd709f4}} 
+\index{TimeKeeper@{TimeKeeper}!finish@{finish}}
+\index{finish@{finish}!TimeKeeper@{TimeKeeper}}
+\doxysubsubsection{\texorpdfstring{finish()}{finish()}}
+{\footnotesize\ttfamily QString Time\+Keeper\+::finish (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_time_keeper_a863e371c682163c95c45e4a84dd709f4}{Time\+Keeper\+::finish}}. 
+
+\begin{DoxyReturn}{Returns}
+time string with ms or sec
+\end{DoxyReturn}
+Finish time monitoring \mbox{\Hypertarget{class_time_keeper_a37c5d792ce1ee55d7c3daa82a3968254}\label{class_time_keeper_a37c5d792ce1ee55d7c3daa82a3968254}} 
+\index{TimeKeeper@{TimeKeeper}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!TimeKeeper@{TimeKeeper}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time_keeper}{Time\+Keeper}} $\ast$ Time\+Keeper\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\mbox{\hyperlink{class_time_keeper_a37c5d792ce1ee55d7c3daa82a3968254}{Time\+Keeper\+::get\+Instance}}. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_time_keeper}{Time\+Keeper}} pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_time_keeper_a9ebe48b270d60a177d2278af058b557e}\label{class_time_keeper_a9ebe48b270d60a177d2278af058b557e}} 
+\index{TimeKeeper@{TimeKeeper}!start@{start}}
+\index{start@{start}!TimeKeeper@{TimeKeeper}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Time\+Keeper\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_time_keeper_a9ebe48b270d60a177d2278af058b557e}{Time\+Keeper\+::start}}. 
+
+Start time monitoring 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/kataich75/repos/\+Find\+Trees/timekeeper.\+h\item 
+/home/kataich75/repos/\+Find\+Trees/timekeeper.\+cpp\end{DoxyCompactItemize}

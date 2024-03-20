@@ -2,6 +2,11 @@
 #define RBTREE_H
 #include "binarytree.h"
 
+/**
+ * @brief The RBTree class
+ *
+ * Red-black binary tree structure
+ */
 class RBTree : public BinaryTree
 {
 public:

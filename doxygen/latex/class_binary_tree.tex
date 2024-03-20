@@ -1,0 +1,135 @@
+\hypertarget{class_binary_tree}{}\doxysection{Binary\+Tree Class Reference}
+\label{class_binary_tree}\index{BinaryTree@{BinaryTree}}
+
+
+The \mbox{\hyperlink{class_binary_tree}{Binary\+Tree}} class.  
+
+
+
+
+{\ttfamily \#include $<$binarytree.\+h$>$}
+
+
+
+Inheritance diagram for Binary\+Tree\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{class_binary_tree__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Binary\+Tree\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{class_binary_tree__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_binary_tree_ad466d3b6e98edb5d3179c21ea81450c4}{Binary\+Tree}} (const data\+\_\+t \&\+\_\+data)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_binary_tree_ad466d3b6e98edb5d3179c21ea81450c4}{Binary\+Tree\+::\+Binary\+Tree}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_binary_tree_a48c23a22a8400765d099e0e6fcebc236}\label{class_binary_tree_a48c23a22a8400765d099e0e6fcebc236}} 
+\mbox{\hyperlink{class_binary_tree_a48c23a22a8400765d099e0e6fcebc236}{$\sim$\+Binary\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_binary_tree_a48c23a22a8400765d099e0e6fcebc236}{Binary\+Tree\+::$\sim$\+Binary\+Tree}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_data}{Data}} \mbox{\hyperlink{class_binary_tree_a318b931e87281ffbc6fccd3319c7ca95}{find}} (const QString \&date)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_binary_tree_a318b931e87281ffbc6fccd3319c7ca95}{Binary\+Tree\+::find}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_binary_tree_a216cab69253557b6ffede4b2a9d7fe52}{build\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_binary_tree_a216cab69253557b6ffede4b2a9d7fe52}{Binary\+Tree\+::build\+Tree}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_binary_tree_a8cd942bd0ef16b5e3faf52c6ad50d774}{insert}} (const \mbox{\hyperlink{class_data}{Data}} \&\+\_\+data)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_binary_tree_a8cd942bd0ef16b5e3faf52c6ad50d774}{Binary\+Tree\+::insert}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_binary_tree_a0468042de5dcb4c108f248dd184d14a5}\label{class_binary_tree_a0468042de5dcb4c108f248dd184d14a5}} 
+data\+\_\+t {\bfseries data}
+\item 
+\mbox{\Hypertarget{class_binary_tree_abc6009cdafb23e9ba4c7c39a8a437856}\label{class_binary_tree_abc6009cdafb23e9ba4c7c39a8a437856}} 
+\mbox{\hyperlink{class_binary_node}{Binary\+Node}} $\ast$ {\bfseries root}
+\item 
+\mbox{\Hypertarget{class_binary_tree_a7d05d80e5ccd8b39fed85e608695f72f}\label{class_binary_tree_a7d05d80e5ccd8b39fed85e608695f72f}} 
+QElapsed\+Timer {\bfseries delay}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_binary_tree}{Binary\+Tree}} class. 
+
+Binary tree structure 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_binary_tree_ad466d3b6e98edb5d3179c21ea81450c4}\label{class_binary_tree_ad466d3b6e98edb5d3179c21ea81450c4}} 
+\index{BinaryTree@{BinaryTree}!BinaryTree@{BinaryTree}}
+\index{BinaryTree@{BinaryTree}!BinaryTree@{BinaryTree}}
+\doxysubsubsection{\texorpdfstring{BinaryTree()}{BinaryTree()}}
+{\footnotesize\ttfamily Binary\+Tree\+::\+Binary\+Tree (\begin{DoxyParamCaption}\item[{const data\+\_\+t \&}]{\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{class_binary_tree_ad466d3b6e98edb5d3179c21ea81450c4}{Binary\+Tree\+::\+Binary\+Tree}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+data} & vector of data \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_binary_tree_a216cab69253557b6ffede4b2a9d7fe52}\label{class_binary_tree_a216cab69253557b6ffede4b2a9d7fe52}} 
+\index{BinaryTree@{BinaryTree}!buildTree@{buildTree}}
+\index{buildTree@{buildTree}!BinaryTree@{BinaryTree}}
+\doxysubsubsection{\texorpdfstring{buildTree()}{buildTree()}}
+{\footnotesize\ttfamily void Binary\+Tree\+::build\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\mbox{\hyperlink{class_binary_tree_a216cab69253557b6ffede4b2a9d7fe52}{Binary\+Tree\+::build\+Tree}}. 
+
+Builds a binary tree \mbox{\Hypertarget{class_binary_tree_a318b931e87281ffbc6fccd3319c7ca95}\label{class_binary_tree_a318b931e87281ffbc6fccd3319c7ca95}} 
+\index{BinaryTree@{BinaryTree}!find@{find}}
+\index{find@{find}!BinaryTree@{BinaryTree}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_data}{Data}} Binary\+Tree\+::find (\begin{DoxyParamCaption}\item[{const QString \&}]{date }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_binary_tree_a318b931e87281ffbc6fccd3319c7ca95}{Binary\+Tree\+::find}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & -\/ find date by this param \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+found data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_binary_tree_a8cd942bd0ef16b5e3faf52c6ad50d774}\label{class_binary_tree_a8cd942bd0ef16b5e3faf52c6ad50d774}} 
+\index{BinaryTree@{BinaryTree}!insert@{insert}}
+\index{insert@{insert}!BinaryTree@{BinaryTree}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void Binary\+Tree\+::insert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_data}{Data}} \&}]{\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_binary_tree_a8cd942bd0ef16b5e3faf52c6ad50d774}{Binary\+Tree\+::insert}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+data} & -\/ some data\\
+\hline
+\end{DoxyParams}
+Insert new element into \mbox{\hyperlink{class_binary_tree}{Binary\+Tree}} 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/kataich75/repos/\+Find\+Trees/binarytree.\+h\item 
+/home/kataich75/repos/\+Find\+Trees/binarytree.\+cpp\end{DoxyCompactItemize}

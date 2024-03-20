@@ -3,25 +3,35 @@
 #include "data.h"
 #include "timekeeper.h"
 
+/**
+ * @brief The BinaryNode class
+ *
+ * Class, which represents element of binary or rb tree
+ */
 class BinaryNode
 {
 public:
     explicit BinaryNode(const Data &_data, bool isRed = true);
     ~BinaryNode();
-    int key();
+    QString key();
 
     Data data;
     BinaryNode *left, *right;
     bool isRed;
 };
 
+/**
+ * @brief The BinaryTree class
+ *
+ * Binary tree structure
+ */
 class BinaryTree
 {
 public:
     explicit BinaryTree(const data_t &_data);
     ~BinaryTree();
 
-    Data find(const int &date);
+    Data find(const QString &date);
 
 protected:
     void buildTree();

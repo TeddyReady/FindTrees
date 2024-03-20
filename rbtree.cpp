@@ -1,16 +1,28 @@
 #include "rbtree.h"
 
+/**
+ * @brief RBTree::RBTree
+ * @param _data
+ *
+ * This class are derived from BinaryTree. Use R or B colors for build tree
+ */
 RBTree::RBTree(const data_t &_data)
     : BinaryTree(_data)
 {}
 
+/**
+ * @brief RBTree::insert
+ * @param _data
+ *
+ * Inserts new Element into RBTree
+ */
 void RBTree::insert(const Data &_data)
 {
     BinaryNode **currentNode = &root;
     while (*currentNode)
     {
         BinaryNode &node = **currentNode;
-        if (_data.at(PLACE).toInt() < node.key())
+        if (QString::compare(_data.at(DATE).toString(), node.key()) < 0)
             currentNode = &node.left;
         else
             currentNode = &node.right;
@@ -24,6 +36,12 @@ void RBTree::insert(const Data &_data)
 //    printTree(&root);
 }
 
+/**
+ * @brief RBTree::balanceTree
+ * @param node
+ *
+ * This method using for repair and check current RBTree
+ */
 void RBTree::balanceTree(BinaryNode **node)
 {
     if (*node == nullptr)
@@ -80,6 +98,12 @@ void RBTree::balanceTree(BinaryNode **node)
     }
 }
 
+/**
+ * @brief RBTree::printTree
+ * @param node
+ *
+ * Recursivly print data from RBTree (depth)
+ */
 void RBTree::printTree(BinaryNode **node)
 {
     if (*node == nullptr)

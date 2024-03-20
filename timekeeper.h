@@ -3,6 +3,11 @@
 #include <QElapsedTimer>
 #include <QString>
 
+/**
+ * @brief The TimeKeeper class
+ *
+ * Class for check time delays
+ */
 class TimeKeeper {
 public:
     static TimeKeeper *instance;

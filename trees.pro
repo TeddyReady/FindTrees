@@ -9,6 +9,7 @@ CONFIG += c++17 cmdline
 SOURCES += \
         binarytree.cpp \
         data.cpp \
+        hashtable.cpp \
         main.cpp \
         findmanager.cpp \
         rbtree.cpp \
@@ -23,6 +24,7 @@ HEADERS += \
     binarytree.h \
     data.h \
     findmanager.h \
+    hashtable.h \
     rbtree.h \
     timekeeper.h
 

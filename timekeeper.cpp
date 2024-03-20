@@ -1,13 +1,26 @@
 #include "timekeeper.h"
 
+/**
+ * @brief TimeKeeper::instance
+ */
 TimeKeeper* TimeKeeper::instance = nullptr;
 
+/**
+ * @brief TimeKeeper::TimeKeeper
+ */
 TimeKeeper::TimeKeeper()
     : time(0)
 {}
 
+/**
+ * @brief TimeKeeper::~TimeKeeper
+ */
 TimeKeeper::~TimeKeeper() {}
 
+/**
+ * @brief TimeKeeper::getInstance
+ * @return TimeKeeper pointer
+ */
 TimeKeeper* TimeKeeper::getInstance()
 {
     if (not instance)
@@ -16,6 +29,11 @@ TimeKeeper* TimeKeeper::getInstance()
     return instance;
 }
 
+/**
+ * @brief TimeKeeper::start
+ *
+ * Start time monitoring
+ */
 void TimeKeeper::start()
 {
     time = 0;
@@ -23,6 +41,12 @@ void TimeKeeper::start()
     timer.restart();
 }
 
+/**
+ * @brief TimeKeeper::finish
+ * @return time string with ms or sec
+ *
+ * Finish time monitoring
+ */
 QString TimeKeeper::finish()
 {
     time = timer.elapsed();
