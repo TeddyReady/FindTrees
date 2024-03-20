@@ -8,7 +8,7 @@ class BinaryNode
 public:
     explicit BinaryNode(const Data &_data, bool isRed = true);
     ~BinaryNode();
-    QString key();
+    int key();
 
     Data data;
     BinaryNode *left, *right;
@@ -21,7 +21,7 @@ public:
     explicit BinaryTree(const data_t &_data);
     ~BinaryTree();
 
-    Data find(const QString &date);
+    Data find(const int &date);
 
 protected:
     void buildTree();

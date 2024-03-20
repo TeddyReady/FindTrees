@@ -9,7 +9,13 @@ public:
 
 private:
     void insert(const Data &_data) override;
+
     void balanceTree(BinaryNode **node);
+    void rotateRight(BinaryNode **node);
+    void rotateLeft(BinaryNode **node);
+    void swapColor(BinaryNode **node);
+
+    void printTree(BinaryNode **node);
 };
 
 #endif // RBTREE_H

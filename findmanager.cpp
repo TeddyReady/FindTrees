@@ -9,23 +9,29 @@
  */
 FindManager::FindManager(int count)
 {
+    gen = QRandomGenerator::global();
     uploadData(count);
-    qDebug().noquote() << binaryTree("11/4/2023").toString() << "\n";
-    qDebug().noquote() << rbTree("11/4/2023").toString() << "\n";
+    qDebug().noquote() << binaryTree(data.at(2).at(PLACE)).toString() << "\n";
+    qDebug().noquote() << rbTree(data.at(2).at(PLACE)).toString() << "\n";
 }
 
 Data FindManager::binaryTree(const QVariant &key)
 {
     BinaryTree tree(data);
 
-    return tree.find(key.toString());
+    return tree.find(key.toInt());
 }
 
 Data FindManager::rbTree(const QVariant &key)
 {
+//    data_t data;
+//    std::vector<int> digits({24, 5, 1, 15, 3, 8, 13, 16});
+//    for (size_t i = 0; i < digits.size(); ++i)
+//        data.append(Data(1, "", "", digits.at(i)));
+
     RBTree tree(data);
 
-    return tree.find(key.toString());
+    return tree.find(key.toInt());
 }
 
 Data FindManager::hashTable(const QVariant &key)
@@ -45,20 +51,19 @@ void FindManager::uploadData(int count)
     data.clear();
 
     for (int i = count; i >=0; --i)
-        data.append(Data(i%3, QString("11/%1/2023").arg(i%8), getRandomName(i), i%4));
+        data.append(Data(gen->bounded(100, 1000), QString("11/%1/2023").arg(gen->bounded(1, 13)), getRandomName(), gen->bounded(1, 100000)));
 
     qDebug().noquote() << "Data uploaded!" << "\n";
 }
 
 /**
  * @brief FindManager::getRandomName
- * @param i - magic number for random
  * @return Random name for data
  */
-QString FindManager::getRandomName(int i) const
+QString FindManager::getRandomName() const
 {
     QString result;
-    switch (i % 6) {
+    switch (gen->bounded(0, 6)) {
     case 0:
         result.append("Ilya ");
         break;
@@ -79,7 +84,7 @@ QString FindManager::getRandomName(int i) const
         break;
     }
 
-    switch (i % 4) {
+    switch (gen->bounded(0, 4)) {
     case 0:
         result.append("Kataev");
         break;

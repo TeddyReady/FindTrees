@@ -13,9 +13,9 @@ BinaryNode::~BinaryNode()
         delete right;
 }
 
-QString BinaryNode::key()
+int BinaryNode::key()
 {
-    return data.at(DATE).toString();
+    return data.at(PLACE).toInt();
 }
 
 BinaryTree::BinaryTree(const data_t &_data)
@@ -38,7 +38,7 @@ void BinaryTree::buildTree()
     qDebug().noquote() << QString("Binary tree was built by %1").arg(TimeKeeper::getInstance()->finish());
 }
 
-Data BinaryTree::find(const QString &date)
+Data BinaryTree::find(const int &date)
 {
     if (root == nullptr)
         buildTree();
@@ -50,9 +50,9 @@ Data BinaryTree::find(const QString &date)
     while (*currentNode)
     {
         BinaryNode &node = **currentNode;
-        if (node.key().compare(date) < 0)
+        if (date < node.key())
             currentNode = &node.left;
-        else if (node.key().compare(date) > 0)
+        else if (date > node.key())
             currentNode = &node.right;
         else
         {
@@ -72,7 +72,7 @@ void BinaryTree::insert(const Data &_data)
     while (*currentNode)
     {
         BinaryNode &node = **currentNode;
-        if (node.key().compare(_data.at(DATE).toString()) < 0)
+        if (_data.at(PLACE).toInt() < node.key())
             currentNode = &node.left;
         else
             currentNode = &node.right;
